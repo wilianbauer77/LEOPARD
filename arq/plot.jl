@@ -1,38 +1,81 @@
-using Pkg
-Pkg.add("Plots")
-Pkg.add("CSV")
-Pkg.add("DataFrames")
-Pkg.add("DelimitedFiles")
-using CSV
-using DataFrames
-using Plots
 using DelimitedFiles
+using Plots
 
-using DelimitedFiles
-using Plots
+# Verifique o diretório de trabalho atual
+println("Diretório de Trabalho Atual: ", pwd())
+
+# Criar a lista de arquivos e ângulos correspondentes
+files = []
+angles = []
+for i in 0:29
+    file_name = "leopardv30$(lpad(i, 2, '0')).dat"
+    if isfile(file_name)
+        angle = (i % 10) * 10  # Cálculo do ângulo para arquivos 00 a 09
+        if i == 9 || i == 19 || i == 29
+            angle = 88  # Ajuste para o ângulo 90º
+        end
+        println("Arquivo encontrado: $file_name (Ângulo: $angle\u00B0)")
+        push!(files, file_name)
+        push!(angles, angle)
+    else
+        println("Aviso: O arquivo $file_name não existe.")
+    end
+end
+
+# Inicializar arrays para armazenar os dados
+data = []
 
 # Carregar os dados dos arquivos .dat
-data1 = readdlm("leopardv3001.dat")
-data2 = readdlm("leopardv3002.dat")
-data3 = readdlm("leopardv3003.dat")
-data4 = readdlm("leopardv3004.dat")
-data5 = readdlm("leopardv3005.dat")
-data6 = readdlm("leopardv3006.dat")
-data7 = readdlm("leopardv3007.dat")
-data8 = readdlm("leopardv3008.dat")
-data9 = readdlm("leopardv3009.dat")
-data10 = readdlm("leopardv3010.dat")
+for file in files
+    try
+        d = readdlm(file)
+        if size(d, 1) > 0 && size(d, 2) >= 3
+            push!(data, d)
+        else
+            println("Aviso: O arquivo $file está vazio ou não contém dados suficientes.")
+        end
+    catch e
+        println("Erro ao ler o arquivo $file: ", e)
+    end
+end
 
-# Extrair as colunas desejadas
-x1 = data1[:, 1]
-y1 = data1[:, 2]
+# Verifique se há dados para plotar
+if length(data) == 0
+    error("Nenhum dado válido foi carregado.")
+end
 
-x2 = data2[:, 1]
-y2 = data2[:, 2]
+# Inicializar o gráfico
+x_limits = (0, 3.0)   # Defina os limites do eixo X
+y_limits = (0, 2.5)  # Defina os limites do eixo Y
 
-# Criar o gráfico
-plot(x1, y1, label="Dados 1", title="Gráfico de Dados Múltiplos", xlabel="Eixo X", ylabel="Eixo Y", marker=:circle)
-plot!(x2, y2, label="Dados 2", marker=:square)
+plot(title="Gráfico de Dados Múltiplos", xlabel="Eixo X", ylabel="Eixo Y", xlims=x_limits, ylims=y_limits)
+
+# Estilos de linha diferentes suportados pela backend GR
+line_styles = [:solid, :dash, :dashdot, :dashdotdot, :dot]
+
+# Cores diferentes para cada faixa de arquivos
+colors = ["green", "red", "blue"]
+
+# Inicializar conjunto para rastrear rótulos de legenda já adicionados
+legend_labels = Set{Int}()
+
+# Extrair as colunas e plotar os dados
+for (i, (d, angle)) in enumerate(zip(data, angles))
+    x = d[:, 1]  # Primeira coluna (indexação começa em 1)
+    y = d[:, 4]  # Colunas pares raízes reais, colunas ímpares raízes complexas
+    linestyle = line_styles[mod((angle ÷ 10), length(line_styles)) + 1]  # Escolhe o estilo da linha
+    color = colors[div(i - 1, 10) + 1]  # Escolhe a cor com base na faixa de arquivos
+    # Adicionar rótulo apenas se não estiver no conjunto de rótulos
+    if angle in legend_labels
+        plot!(x, y, linestyle=linestyle, linewidth=2, color=color,label="")
+    else
+        plot!(x, y, label="$angle\u00B0", linestyle=linestyle, linewidth=2, color=color)
+        push!(legend_labels, angle)
+    end
+end
+# Configurar a legenda para ser preta
+plot!(legendfontsize=10, legend_foreground_color=:black, legend_background_color=:white, legend=:outertopright, legendcolor=:black)
 
 # Salvar o gráfico em um arquivo
-savefig("grafico_multiplos_dados.png")
+savefig("n=2 it=100.png")
+display(plot)

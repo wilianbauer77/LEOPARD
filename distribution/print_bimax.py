@@ -5,7 +5,7 @@ import numpy as np
 
 #######################
 
-Nspecies=2
+Nspecies=1
 
 #######################
 
@@ -29,7 +29,7 @@ vdrift=np.zeros(Nspecies)
 ########################
 
 #species 1
-
+ciarb=1
 npara[0]=255
 nperp[0]=64
 
@@ -47,7 +47,7 @@ vperpmax[0]=10.0
 
 #species 2
 
-npara[1]=255
+""" npara[1]=255
 nperp[1]=64
 
 dens[1]=1.0
@@ -60,7 +60,7 @@ vparamin[1]=-260.0
 vparamax[1]=260.0
 
 vperpmin[1]=0.0
-vperpmax[1]=260.0
+vperpmax[1]=260.0 """
 
 
 #############################
@@ -75,7 +75,7 @@ def dist_bimax(vpar,vper, n,m,beta_par,beta_per,drift):
 
 for ispecies in range(0,Nspecies):
 
-	file_name='distribution'+str(ispecies+1)+'.dat'
+	file_name='distribution00'+str(ispecies+1)+'-'+str(ciarb)+'.dat'
 
 	vpara = np.linspace(vparamin[ispecies],vparamax[ispecies], npara[ispecies])
 	vperp = np.linspace(vperpmin[ispecies],vperpmax[ispecies], nperp[ispecies])
