@@ -6,7 +6,7 @@ nk 	       	= 54
 /
 
 &number_roots
-nroots= 3
+nroots= 5
 /
 
 &initial_guess

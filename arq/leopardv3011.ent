@@ -6,7 +6,7 @@ nk 	       	= 100
 /
 
 &number_roots
-nroots= 3
+nroots= 5
 maxit= 100
 /
 
