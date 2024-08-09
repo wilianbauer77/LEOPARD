@@ -7,7 +7,7 @@ println("Diretório de Trabalho Atual: ", pwd())
 # Criar a lista de arquivos e ângulos correspondentes
 files = []
 angles = []
-nroots = 2
+nroots = 3
 for i in 0:29
     file_name = "leopardv30$(lpad(i, 2, '0')).dat"
     if isfile(file_name)
