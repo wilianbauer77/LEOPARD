@@ -1,307 +1,322 @@
  Read input data
  ...done
  Read velocity distributions from files
-           1         255          64
  ...done.
   
 -------     1------- k=  0.01000000
- time elapsed:   92.060914999999994     
+ time elapsed:   9.8350000000000000E-003
   
 -------     2------- k=  0.03990000
- time elapsed:   47.000779000000009     
+ time elapsed:   4.0290000000000013E-003
   
 -------     3------- k=  0.06980000
- time elapsed:   33.475452000000018     
+ time elapsed:   1.4287999999999999E-002
   
 -------     4------- k=  0.09970000
- time elapsed:   20.257115999999996     
+ time elapsed:   1.7487000000000003E-002
   
 -------     5------- k=  0.12960000
- time elapsed:   40.967627999999991     
+ time elapsed:   2.6915999999999995E-002
   
 -------     6------- k=  0.15950000
- time elapsed:   16.785116000000016     
+ time elapsed:   3.3419000000000004E-002
   
 -------     7------- k=  0.18940000
- time elapsed:   30.019555000000025     
+ time elapsed:   5.8483999999999994E-002
   
 -------     8------- k=  0.21930000
- time elapsed:   28.349301999999966     
+ time elapsed:   8.3854000000000012E-002
   
 -------     9------- k=  0.24920000
- time elapsed:   23.800510999999972     
+ time elapsed:  0.19454599999999997     
   
 -------    10------- k=  0.27910000
- time elapsed:   22.156307999999967     
+ time elapsed:   5.6323999999999985E-002
   
 -------    11------- k=  0.30900000
- time elapsed:   52.389359000000013     
+ time elapsed:  0.11324999999999996     
   
 -------    12------- k=  0.33890000
- time elapsed:   47.500576999999964     
+ time elapsed:  0.21134999999999993     
   
 -------    13------- k=  0.36880000
- time elapsed:   17.589042000000006     
+ time elapsed:  0.32478299999999993     
   
 -------    14------- k=  0.39870000
- time elapsed:   32.307245000000023     
+ time elapsed:  0.39842399999999989     
   
 -------    15------- k=  0.42860000
- time elapsed:   20.479422999999940     
+ time elapsed:   7.5953000000000159E-002
   
 -------    16------- k=  0.45850000
- time elapsed:   13.367943999999966     
+ time elapsed:  0.24028700000000014     
   
 -------    17------- k=  0.48840000
- time elapsed:   16.584378000000015     
+ time elapsed:  0.25695599999999996     
   
 -------    18------- k=  0.51830000
- time elapsed:   26.524895000000015     
+ time elapsed:  0.44069100000000017     
   
 -------    19------- k=  0.54820000
- time elapsed:   16.025227999999970     
+ time elapsed:  0.14538299999999982     
   
 -------    20------- k=  0.57810000
- time elapsed:   12.914204000000041     
+Warning: Muller did not converge in 50 steps for roots: 3
+ time elapsed:  0.68084999999999996     
   
 -------    21------- k=  0.60800000
- time elapsed:   14.902614999999969     
+ time elapsed:  0.91360300000000016     
   
 -------    22------- k=  0.63790000
- time elapsed:   9.6900489999999309     
+ time elapsed:  0.65755499999999945     
   
 -------    23------- k=  0.66780000
- time elapsed:   17.934888999999998     
+ time elapsed:  0.28657500000000002     
   
 -------    24------- k=  0.69770000
- time elapsed:   13.093053999999938     
+ time elapsed:  0.38592799999999983     
   
 -------    25------- k=  0.72760000
- time elapsed:   17.647225999999932     
+ time elapsed:  0.65136299999999991     
   
 -------    26------- k=  0.75750000
- time elapsed:   8.4688249999999243     
+ time elapsed:   1.5323340000000005     
   
 -------    27------- k=  0.78740000
- time elapsed:   14.791405999999938     
+ time elapsed:   1.3470400000000007     
   
 -------    28------- k=  0.81730000
- time elapsed:   9.5572559999999385     
+ time elapsed:  0.96458600000000061     
   
 -------    29------- k=  0.84720000
- time elapsed:   12.356612000000041     
+ time elapsed:   1.2973970000000001     
   
 -------    30------- k=  0.87710000
- time elapsed:   14.128300000000081     
+ time elapsed:  0.73085700000000031     
   
 -------    31------- k=  0.90700000
- time elapsed:   7.8441699999999628     
+ time elapsed:  0.99912900000000171     
   
 -------    32------- k=  0.93690000
- time elapsed:   11.189299000000005     
+ time elapsed:   1.5551270000000006     
   
 -------    33------- k=  0.96680000
- time elapsed:   10.092972000000032     
+Warning: Muller did not converge in 50 steps for roots: 3
+ time elapsed:   2.1868539999999985     
   
 -------    34------- k=  0.99670000
- time elapsed:   8.4273819999999660     
+ time elapsed:   1.8387089999999979     
   
 -------    35------- k=  1.02660000
- time elapsed:   14.455388999999968     
+ time elapsed:  0.90059399999999812     
   
 -------    36------- k=  1.05650000
- time elapsed:   16.507282000000032     
+ time elapsed:  0.84815599999999947     
   
 -------    37------- k=  1.08640000
- time elapsed:   21.048479000000043     
+ time elapsed:   1.1075289999999995     
   
 -------    38------- k=  1.11630000
- time elapsed:   17.200288000000000     
+ time elapsed:  0.72601099999999974     
   
 -------    39------- k=  1.14620000
- time elapsed:   17.361006999999972     
+ time elapsed:   1.5383870000000002     
   
 -------    40------- k=  1.17610000
- time elapsed:   13.643762000000038     
+ time elapsed:   1.1062590000000014     
   
 -------    41------- k=  1.20600000
- time elapsed:   14.624049000000014     
+Warning: Muller did not converge in 50 steps for roots: 3
+ time elapsed:   1.3368259999999985     
   
 -------    42------- k=  1.23590000
- time elapsed:   21.629574000000048     
+ time elapsed:  0.41225500000000181     
   
 -------    43------- k=  1.26580000
- time elapsed:   14.179518000000030     
+ time elapsed:  0.80247200000000163     
   
 -------    44------- k=  1.29570000
- time elapsed:   18.596936000000028     
+ time elapsed:  0.71867599999999854     
   
 -------    45------- k=  1.32560000
- time elapsed:   27.019752000000040     
+ time elapsed:  0.39831499999999664     
   
 -------    46------- k=  1.35550000
- time elapsed:   14.286068999999998     
+ time elapsed:  0.57333599999999763     
   
 -------    47------- k=  1.38540000
- time elapsed:   18.557351999999923     
+ time elapsed:  0.57411399999999801     
   
 -------    48------- k=  1.41530000
- time elapsed:   20.830893999999944     
+Warning: Muller did not converge in 50 steps for roots: 3
+ time elapsed:   1.4872029999999974     
   
 -------    49------- k=  1.44520000
- time elapsed:   11.351167000000032     
+ time elapsed:  0.90212000000000003     
   
 -------    50------- k=  1.47510000
- time elapsed:   21.769566000000168     
+ time elapsed:  0.18830899999999673     
   
 -------    51------- k=  1.50500000
- time elapsed:   22.887373000000025     
+ time elapsed:  0.39167099999999522     
   
 -------    52------- k=  1.53490000
- time elapsed:   41.208954000000176     
+ time elapsed:  0.70756399999999786     
   
 -------    53------- k=  1.56480000
- time elapsed:   14.885688999999957     
+ time elapsed:  0.84212899999999991     
   
 -------    54------- k=  1.59470000
- time elapsed:   8.2126379999999699     
+ time elapsed:  0.30630999999999631     
   
 -------    55------- k=  1.62460000
- time elapsed:   14.026328000000149     
+Warning: Muller did not converge in 50 steps for roots: 3
+ time elapsed:   1.3454219999999992     
   
 -------    56------- k=  1.65450000
- time elapsed:   15.044804999999997     
+ time elapsed:  0.15219700000000103     
   
 -------    57------- k=  1.68440000
- time elapsed:   21.209250000000111     
+ time elapsed:  0.57360700000000264     
   
 -------    58------- k=  1.71430000
- time elapsed:   9.5617529999999533     
+ time elapsed:  0.41322900000000118     
   
 -------    59------- k=  1.74420000
- time elapsed:   26.938065999999935     
+ time elapsed:  0.16100699999999790     
   
 -------    60------- k=  1.77410000
- time elapsed:   17.986296000000038     
+ time elapsed:  0.93006099999999492     
   
 -------    61------- k=  1.80400000
- time elapsed:   20.640313999999989     
+Warning: Muller did not converge in 50 steps for roots: 3
+ time elapsed:  0.89578700000000566     
   
 -------    62------- k=  1.83390000
- time elapsed:   18.974699999999984     
+ time elapsed:  0.61154100000000255     
   
 -------    63------- k=  1.86380000
- time elapsed:   18.722932000000128     
+Warning: Muller did not converge in 50 steps for roots: 2 3
+ time elapsed:   1.2593170000000029     
   
 -------    64------- k=  1.89370000
- time elapsed:   7.1038080000000718     
+ time elapsed:  0.38758299999999934     
   
 -------    65------- k=  1.92360000
- time elapsed:   28.137559999999894     
+ time elapsed:  0.71309600000000017     
   
 -------    66------- k=  1.95350000
- time elapsed:   22.239559999999983     
+ time elapsed:   1.1152580000000043     
   
 -------    67------- k=  1.98340000
- time elapsed:   21.102272000000085     
+ time elapsed:  0.64670300000000225     
   
 -------    68------- k=  2.01330000
- time elapsed:   26.798425000000179     
+ time elapsed:  0.14308900000000335     
   
 -------    69------- k=  2.04320000
- time elapsed:   9.1304620000000796     
+Warning: Muller did not converge in 50 steps for roots: 3
+ time elapsed:  0.92743699999999762     
   
 -------    70------- k=  2.07310000
- time elapsed:   8.7489009999999325     
+Warning: Muller did not converge in 50 steps for roots: 2
+ time elapsed:  0.85587400000000002     
   
 -------    71------- k=  2.10300000
- time elapsed:   9.0637340000000677     
+ time elapsed:  0.49189599999999700     
   
 -------    72------- k=  2.13290000
- time elapsed:   8.0226139999999759     
+ time elapsed:   1.0866210000000009     
   
 -------    73------- k=  2.16280000
- time elapsed:   8.0459029999999530     
+ time elapsed:  0.40819100000000219     
   
 -------    74------- k=  2.19270000
- time elapsed:   16.948559000000159     
+Warning: Muller did not converge in 50 steps for roots: 2
+ time elapsed:  0.86466000000000065     
   
 -------    75------- k=  2.22260000
- time elapsed:   17.627377000000024     
+ time elapsed:  0.51249100000000425     
   
 -------    76------- k=  2.25250000
- time elapsed:   20.961692999999968     
+Warning: Muller did not converge in 50 steps for roots: 2
+ time elapsed:  0.97345799999999372     
   
 -------    77------- k=  2.28240000
- time elapsed:   25.328854999999976     
+ time elapsed:  0.39946900000000340     
   
 -------    78------- k=  2.31230000
- time elapsed:   20.439284000000043     
+ time elapsed:  0.43696899999999772     
   
 -------    79------- k=  2.34220000
- time elapsed:   14.673054999999977     
+Warning: Muller did not converge in 50 steps for roots: 2
+ time elapsed:   1.0650389999999987     
   
 -------    80------- k=  2.37210000
- time elapsed:   18.752476999999999     
+ time elapsed:  0.40509500000000287     
   
 -------    81------- k=  2.40200000
- time elapsed:   24.927413999999999     
+ time elapsed:  0.67533000000000243     
   
 -------    82------- k=  2.43190000
- time elapsed:   24.934473000000025     
+ time elapsed:   1.1180820000000011     
   
 -------    83------- k=  2.46180000
- time elapsed:   37.784660000000031     
+Warning: Muller did not converge in 50 steps for roots: 2
+ time elapsed:  0.97294200000000330     
   
 -------    84------- k=  2.49170000
- time elapsed:   31.587106999999833     
+ time elapsed:  0.53922599999999932     
   
 -------    85------- k=  2.52160000
- time elapsed:   10.913035000000036     
+ time elapsed:  0.49036199999999752     
   
 -------    86------- k=  2.55150000
- time elapsed:   10.410354000000098     
+ time elapsed:  0.83366200000000390     
   
 -------    87------- k=  2.58140000
- time elapsed:   10.406322000000046     
+ time elapsed:  0.72853299999999876     
   
 -------    88------- k=  2.61130000
- time elapsed:   9.4648019999999633     
+Warning: Muller did not converge in 50 steps for roots: 2 3
+ time elapsed:   1.3054449999999989     
   
 -------    89------- k=  2.64120000
- time elapsed:   9.9137920000000577     
+Warning: Muller did not converge in 50 steps for roots: 3
+ time elapsed:   1.0951269999999980     
   
 -------    90------- k=  2.67110000
- time elapsed:   10.020560000000160     
+ time elapsed:  0.64867999999999881     
   
 -------    91------- k=  2.70100000
- time elapsed:   8.8903780000000552     
+Warning: Muller did not converge in 50 steps for roots: 3
+ time elapsed:  0.64632200000000495     
   
 -------    92------- k=  2.73090000
- time elapsed:   10.799025999999913     
+ time elapsed:  0.36160600000000187     
   
 -------    93------- k=  2.76080000
- time elapsed:   21.275804000000107     
+ time elapsed:  0.49682399999999660     
   
 -------    94------- k=  2.79070000
- time elapsed:   21.035515999999916     
+ time elapsed:  0.39684900000000312     
   
 -------    95------- k=  2.82060000
- time elapsed:   24.061065000000099     
+ time elapsed:  0.53788899999999984     
   
 -------    96------- k=  2.85050000
- time elapsed:   21.085068000000092     
+ time elapsed:  0.29283899999999363     
   
 -------    97------- k=  2.88040000
- time elapsed:   35.689229000000068     
+ time elapsed:  0.25933099999999598     
   
 -------    98------- k=  2.91030000
- time elapsed:   32.131419000000051     
+ time elapsed:  0.36506700000000336     
   
 -------    99------- k=  2.94020000
- time elapsed:   35.067610000000059     
+ time elapsed:  0.32286299999999812     
   
 -------   100------- k=  2.97010000
- time elapsed:   23.346333000000186     
+ time elapsed:  0.37347599999999659     
 
-Total time elapsed(s):2010.9718060000000  (min): 33.516196766666667
+Total time elapsed(s):64.840702000000007  (min): 1.0806783666666668
