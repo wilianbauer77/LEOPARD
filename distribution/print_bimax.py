@@ -35,8 +35,8 @@ nperp[0]=64
 
 dens[0]=1.0
 mu[0]=1.0
-beta_para[0]=4.0
-beta_perp[0]=2.0
+beta_para[0]=20.0
+beta_perp[0]=1.0
 vdrift[0]=-0.0
 
 vparamin[0]=-12.0
@@ -69,6 +69,10 @@ limit=10.0**(-300)
 
 
 def dist_bimax(vpar,vper, n,m,beta_par,beta_per,drift):
+	bimax=np.exp(-n*(vpar-drift)**2/beta_par/m -n*vper**2/beta_per/m)* n**1.5 /(m**1.5 *np.pi**1.5 *beta_per*np.sqrt(beta_par))
+	return bimax.ravel()
+
+def dist_bikappa(vpar,vper, n,m,beta_par,beta_per,drift):
 	bimax=np.exp(-n*(vpar-drift)**2/beta_par/m -n*vper**2/beta_per/m)* n**1.5 /(m**1.5 *np.pi**1.5 *beta_per*np.sqrt(beta_par))
 	return bimax.ravel()
 
