@@ -5,7 +5,7 @@ import numpy as np
 
 #######################
 
-Nspecies=1
+Nspecies=2
 
 #######################
 
@@ -35,7 +35,7 @@ nperp[0]=64
 
 dens[0]=1.0
 mu[0]=1.0
-beta_para[0]=20.0
+beta_para[0]=1.0
 beta_perp[0]=1.0
 vdrift[0]=-0.0
 
@@ -47,12 +47,12 @@ vperpmax[0]=10.0
 
 #species 2
 
-""" npara[1]=255
+npara[1]=255
 nperp[1]=64
 
 dens[1]=1.0
 mu[1]=1836.0
-beta_para[1]=1.0
+beta_para[1]=20.0
 beta_perp[1]=1.0
 vdrift[1]=-0.0
 
@@ -60,8 +60,7 @@ vparamin[1]=-260.0
 vparamax[1]=260.0
 
 vperpmin[1]=0.0
-vperpmax[1]=260.0 """
-
+vperpmax[1]=260.0 
 
 #############################
 
