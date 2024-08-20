@@ -2,7 +2,7 @@
 &wavenumber
 kstart		= 0.01
 kend 	       	= 5.00
-nk 	       	= 40
+nk 	       	= 100
 /
 
 &number_roots
