@@ -7,7 +7,7 @@ nk 	       	= 100
 
 &number_roots
 nroots= 5
-maxit= 100
+maxit= 40
 /
 
 &initial_guess

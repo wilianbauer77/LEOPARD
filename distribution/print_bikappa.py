@@ -72,7 +72,7 @@ index = 0  # Índice inicial para os arquivos
 for ispecies in range(0, Nspecies):
     # Identificação da espécie: iarb
     iarb = str(ispecies + 1)  # Número da espécie de 1 a 9
-    index = 0
+    #index = 0
     for kappa in k:
         # Ajuste o theta para o kappa atual
         theta_para[ispecies] = (((kappa - 1.5) / kappa) * beta_para[ispecies] * mu[ispecies] / dens[ispecies]) ** 0.5
@@ -83,8 +83,10 @@ for ispecies in range(0, Nspecies):
         set_num = str(index).zfill(3)  # Preenche com zeros à esquerda para 3 dígitos
         
         # Nomes dos arquivos ajustados para incluir apenas o índice e o número da espécie
-        file_name_bimax = f'distribution_{set_num}-{iarb}.dat'
-        file_name_bikappa = f'distribution_{set_num}-{iarb}.dat'
+        #file_name_bimax = f'distribution{set_num}-{iarb}.dat'
+        #file_name_bikappa = f'distribution{set_num}-{iarb}.dat'
+        #file_name_bimax = f'distribution{set_num}-{iarb}.dat'
+        file_name_bikappa = f'distribution{set_num}-{iarb}.dat'
 
         # Calcula a distribuição bi-maxwelliana
         vpara = numpy.linspace(vparamin[ispecies], vparamax[ispecies], npara[ispecies])
@@ -110,15 +112,15 @@ for ispecies in range(0, Nspecies):
         # Imprimir o valor da integral e da densidade esperada para verificação
         print(f'Integral da distribuição bi-kappa para espécie {ispecies + 1} e kappa = {kappa}: {integral_bikappa:.6e}')
         print(f'Densidade esperada: {dens[ispecies]:.6e}')
-        dat_fin_bimax = open(file_name_bimax, 'w')
+        #dat_fin_bimax = open(file_name_bimax, 'w')
         dat_fin_bikappa = open(file_name_bikappa, 'w')
         for i in range(0, npara[ispecies]):
             for j in range(0, nperp[ispecies]):
-                dat_fin_bimax.write(f"{vpara[i]:.6e} {vperp[j]:.6e} {data_new_bikappa[j, i]:.6e}\n")
+                #dat_fin_bimax.write(f"{vpara[i]:.6e} {vperp[j]:.6e} {data_new_bikappa[j, i]:.6e}\n")
                 dat_fin_bikappa.write(f"{vpara[i]:.6e} {vperp[j]:.6e} {data_new_bikappa[j, i]:.6e}\n")
 
 
-        dat_fin_bimax.close()
+        #dat_fin_bimax.close()
         dat_fin_bikappa.close()
 
         # Plot da distribuição bi-kappa para o valor atual de kappa
@@ -128,5 +130,5 @@ for ispecies in range(0, Nspecies):
     plt.ylabel(r'$\log{f(v)}$')
     plt.title(f'Species {ispecies + 1} Distribution')
     plt.legend()
-    plt.savefig(f'distribution_{set_num}-{iarb}.png')  # Salva o gráfico como imagem
+    plt.savefig(f'distribution{set_num}-{iarb}.png')  # Salva o gráfico como imagem
     plt.show()

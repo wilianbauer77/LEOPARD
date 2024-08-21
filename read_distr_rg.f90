@@ -36,7 +36,7 @@ if(narb.ne.0) then
    do iarb=1,narb
 
       write(ciarb, fmt= '(i1)')iarb
-      filename= 'distribution/distribution_'//set_num//'-'//ciarb//'.dat'
+      filename= 'distribution/distribution'//set_num//'-'//ciarb//'.dat'
 !       write(filename,'(A25,I1,A4)') 'distribution/distribution', iarb,'.dat'
       open(newunit= distu, status='old',file= filename, iostat= ios)
       if(ios /= 0)then
