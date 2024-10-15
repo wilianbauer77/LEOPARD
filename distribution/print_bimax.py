@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib.pyplot as plt
+import mpmath
 
 #for python 2.7
 
@@ -52,8 +54,8 @@ nperp[1]=64
 
 dens[1]=1.0
 mu[1]=1836.0
-beta_para[1]=20.0
-beta_perp[1]=1.0
+beta_para[1]=4.0
+beta_perp[1]=2.0
 vdrift[1]=-0.0
 
 vparamin[1]=-260.0
@@ -78,7 +80,7 @@ def dist_bikappa(vpar,vper, n,m,beta_par,beta_per,drift):
 
 for ispecies in range(0,Nspecies):
 
-	file_name='distribution00'+str(ispecies+1)+'-'+str(ciarb)+'.dat'
+	file_name='distribution02'+str(ispecies+1)+'-'+str(ciarb)+'.dat'
 
 	vpara = np.linspace(vparamin[ispecies],vparamax[ispecies], npara[ispecies])
 	vperp = np.linspace(vperpmin[ispecies],vperpmax[ispecies], nperp[ispecies])
@@ -109,3 +111,13 @@ for ispecies in range(0,Nspecies):
 			dat_fin.write(" ")
 			dat_fin.write(str(data_new[j,i]))
 			dat_fin.write("\n")
+
+	dat_fin.close()
+	# Plot da distribuição bi-kappa para o valor atual de kappa
+	plt.plot(vpara, np.log10(data_new[:, :].sum(axis=0)), label=rf'Maxwellian')
+	plt.xlabel(r'$v_\parallel$')
+	plt.ylabel(r'$\log{f(v)}$')
+	plt.title(f'Species {ispecies + 1} Distribution')
+	plt.legend()
+	plt.savefig(f'distribution_maxwellian-{ciarb}.png')  # Salva o gráfico como imagem
+	plt.show()

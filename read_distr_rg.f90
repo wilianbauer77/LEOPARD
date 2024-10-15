@@ -37,7 +37,8 @@ if(narb.ne.0) then
 
       write(ciarb, fmt= '(i1)')iarb
       filename= 'distribution/distribution'//set_num//'-'//ciarb//'.dat'
-!       write(filename,'(A25,I1,A4)') 'distribution/distribution', iarb,'.dat'
+      !filename= 'distribution/distribution'//set_num//'.dat'
+      !write(filename,'(A25,I1,A4)') 'distribution/distribution', iarb,'.dat'
       open(newunit= distu, status='old',file= filename, iostat= ios)
       if(ios /= 0)then
          write(*, '(2a)') 'Error during access to distribution file: ', filename
@@ -46,7 +47,7 @@ if(narb.ne.0) then
 
       npara(iarb)=0
       nperp(iarb)=0
-
+      
       read(distu,*,iostat=ios) vpa, start_pe, dist_value
       if(ios /= 0)then
          write(*, '(2a)') 'Error during access to data in the distribution file: ', filename
@@ -57,6 +58,7 @@ if(narb.ne.0) then
       do while(.true.)
 
          read(distu,*,iostat=ios) vpa, vpe, dist_value
+         !exit
 
          if(ios > 0)then
             write(*, '(2a)') 'Error during access to data in the distribution file: ', filename
