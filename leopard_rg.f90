@@ -91,7 +91,7 @@ do ik=1,nk
    write(logu, *) 'time elapsed:', finish2-start2
 
 
-   if ((ik .ge. 3).and.(ik .lt. nk))  then
+   if ((ik .ge. 3).and.(ik < nk))  then
 
       !if three subsequent solutions omega(k) are found, use quadratic polynomial fit 
       !to guess next starting frequency for Muller iteration

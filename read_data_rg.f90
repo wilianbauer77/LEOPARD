@@ -67,7 +67,7 @@ do n=1,Nspecies
    beta_para(n)=beta_para_in
    beta_perp(n)=beta_perp_in
 
-   if(mode(n).ne.1) then
+   if(mode(n)/=1) then
       beta_ratio(n)=beta_perp(n)/beta_para(n)
    endif
    
@@ -75,9 +75,9 @@ enddo
 
 close(inputu)
 
-if(omega_r.eq.0.0) omega_r=10.0**(-12) !algorithm cannot handle exact zero
-if(omega_i.eq.0.0) omega_i=10.0**(-12) !algorithm cannot handle exact zero
-if(theta.eq.0.0) theta=0.0001          !algorithm cannot handle exact zero
+if(omega_r==0.0) omega_r=10.0**(-12) !algorithm cannot handle exact zero
+if(omega_i==0.0) omega_i=10.0**(-12) !algorithm cannot handle exact zero
+if(theta==0.0) theta=0.0001          !algorithm cannot handle exact zero
 
 
 omega_start=omega_r+i*omega_i

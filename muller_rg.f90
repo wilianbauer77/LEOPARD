@@ -88,17 +88,17 @@ do izero= 1, nroots
       ga_old=aimag(omega(3))
 
 
-      if(   ( ( ((om.ge.om_old).and.(abs(1.0-abs(om_old/om)).lt.rf_error)).or.&
-            &    ((om.lt.om_old).and.(abs(1.0-abs(om/om_old)).lt.rf_error))).and.&
-            &  ( ((ga.ge.ga_old).and.(abs(1.0-abs(ga_old/ga)).lt.rf_error)).or.&
-            &    ((ga.lt.ga_old).and.(abs(1.0-abs(ga/ga_old)).lt.rf_error)))).or.&
-            &( ( ((om.ge.om_old).and.(abs(1.0-abs(om_old/om)).lt.rf_error)).or.&
-            &    ((om.lt.om_old).and.(abs(1.0-abs(om/om_old)).lt.rf_error))).and.&
-            &  ( (abs(ga).lt.10.0**(-10)).and.(abs(ga_old).lt.10.0**(-10)))).or.&
-            &( ( ((ga.ge.ga_old).and.(abs(1.0-abs(ga_old/ga)).lt.rf_error)).or.&
-            &    ((ga.lt.ga_old).and.(abs(1.0-abs(ga/ga_old)).lt.rf_error))).and.&
-            &  ( (abs(om).lt.10.0**(-10)).and.(abs(om_old).lt.10.0**(-10)))).or.&
-            &( ( (abs(om).lt.10.0**(-10)).and.(abs(ga).lt.10.0**(-10)))    )  ) exit
+      if(   ( ( ((om.ge.om_old).and.(abs(1.0-abs(om_old/om))<rf_error)).or.&
+            &    ((om<om_old).and.(abs(1.0-abs(om/om_old))<rf_error))).and.&
+            &  ( ((ga.ge.ga_old).and.(abs(1.0-abs(ga_old/ga))<rf_error)).or.&
+            &    ((ga<ga_old).and.(abs(1.0-abs(ga/ga_old))<rf_error)))).or.&
+            &( ( ((om.ge.om_old).and.(abs(1.0-abs(om_old/om))<rf_error)).or.&
+            &    ((om<om_old).and.(abs(1.0-abs(om/om_old))<rf_error))).and.&
+            &  ( (abs(ga)<10.0**(-10)).and.(abs(ga_old)<10.0**(-10)))).or.&
+            &( ( ((ga.ge.ga_old).and.(abs(1.0-abs(ga_old/ga))<rf_error)).or.&
+            &    ((ga<ga_old).and.(abs(1.0-abs(ga/ga_old))<rf_error))).and.&
+            &  ( (abs(om)<10.0**(-10)).and.(abs(om_old)<10.0**(-10)))).or.&
+            &( ( (abs(om)<10.0**(-10)).and.(abs(ga)<10.0**(-10)))    )  ) exit
 
 
       !stop iteration if last step was ineffective
@@ -115,12 +115,12 @@ do izero= 1, nroots
          tfxi= abs((aimag(fx(4))-aimag(fx(3)))/aimag(fx(4)))
       end if
       
-      if((tfxr .lt. 1.0e-12) .and. (tfxi .lt. 1.0e-12)) then
+      if((tfxr < 1.0e-12) .and. (tfxi < 1.0e-12)) then
          write(logu,*) 'Last step in Muller iteration was ineffective'
          exit
       endif
-!       if( (abs((real(fx(4))-real(fx(3)))/real(fx(4))) .lt. 1.0e-12).and. &
-!             ( abs((aimag(fx(4))-aimag(fx(3)))/aimag(fx(4))) .lt. 1.0e-12)) then
+!       if( (abs((real(fx(4))-real(fx(3)))/real(fx(4))) < 1.0e-12).and. &
+!             ( abs((aimag(fx(4))-aimag(fx(3)))/aimag(fx(4))) < 1.0e-12)) then
 !          write(logu,*) 'Last step in Muller iteration was ineffective'
 !          exit
 !       endif
@@ -130,7 +130,7 @@ do izero= 1, nroots
          fx(j)=fx(j+1)
       enddo
 
-!       if(n.gt.40) then
+!       if(n>40) then
 !          write(logu, fmt= '(a,i0)') 'Error: Muller method did not converge for root: ', izero
 !          exit
 !       endif
